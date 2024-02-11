@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { User } from "../components/index"
+import { apiUrl } from "../api";
 
 export default function UsersBar(){
 
@@ -10,7 +11,7 @@ export default function UsersBar(){
 
     const [users, setUsers] = useState([]);
     useEffect(()=>{
-        const response = axios.get("https://payment-system-api.vercel.app/api/v1/user/users?search="+filter, {
+        const response = axios.get(`${apiUrl}/api/v1/user/users?search=${filter}`, {
             headers: {
                 authorization: token
             }

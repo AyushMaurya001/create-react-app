@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react"
-
+import { apiUrl } from "../api";
 
 export default function Balancebar(){
 
@@ -9,7 +9,7 @@ export default function Balancebar(){
     
     const token = localStorage.getItem("token");
     useEffect(()=>{
-        const response = axios.get("https://payment-system-api.vercel.app/api/v1/account/balance", {
+        const response = axios.get(`${apiUrl}/api/v1/account/balance`, {
             headers: {
                 Authorization: token
             }

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CardHeader, Input, Button } from "../components"
 import { useNavigate } from "react-router-dom"
 import axios, { isAxiosError } from "axios";
+import { apiUrl } from "../api";
 
 export default function Signin(){
 
@@ -18,7 +19,7 @@ export default function Signin(){
                 <Input required={true} label="Enter password" min="4" max="20" type="password" placeholder="" onChangeSet={setPassword} />
                 <Button label="Sign Up" buttonOnClick={ async ()=>{
                     try {
-                        const response = await axios.post("https://payment-system-api.vercel.app/api/v1/user/signin", {
+                        const response = await axios.post(`${apiUrl}/api/v1/user/signin`, {
                             email: email,
                             password: password
                         })

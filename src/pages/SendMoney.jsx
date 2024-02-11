@@ -2,6 +2,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button, CardHeader, Input, UserData } from "../components/index";
 import axios from "axios";
 import { useState } from "react";
+import { apiUrl } from "../api";
 
 export default function SendMoney(){
 
@@ -21,7 +22,7 @@ export default function SendMoney(){
                     <Button label="Send Money" alternativeDes="Running low in balance." alternative="Take Loan!" buttonOnClick={ async ()=>{
                         try {
                             const to = searchParams.get("to");
-                            const response = await axios.post("https://payment-system-api.vercel.app/api/v1/account/sendmoney", {
+                            const response = await axios.post(`${apiUrl}/api/v1/account/sendmoney`, {
                                 to,
                                 amount: parseInt(amount)
                             }, {
