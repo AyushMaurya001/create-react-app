@@ -8,6 +8,8 @@ import Balancebar from "./Balancebar"
 import UsersBar from "./UsersBar"
 import User from "./User"
 import UserData from "./UserData"
+import Transactions from "./Transactions"
+import Transaction from "./Transaction"
 
 export {
     Header,
@@ -20,4 +22,6 @@ export {
     UsersBar,
     User,
     UserData,
+    Transactions,
+    Transaction,
 }

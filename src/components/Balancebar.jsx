@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react"
 import { apiUrl } from "../api";
 
-export default function Balancebar(){
+export default function Balancebar({ className }){
 
     const [balance, setBalance] = useState(0);
     
@@ -18,7 +18,7 @@ export default function Balancebar(){
 
     return (
         <div>
-            <p className=" font-Inter text-center text-xl font-medium px-10 m-4 ">
+            <p className="font-Inter text-center text-xl font-medium px-10 m-4" >
                 Your Balance: {balance}
             </p>
         </div>

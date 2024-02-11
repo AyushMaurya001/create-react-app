@@ -1,1 +1,1 @@
-export const apiUrl = `https://create-react-api.onrender.com`
+export const apiUrl = `http://localhost:1000`

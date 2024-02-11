@@ -3,6 +3,7 @@ import Dashboard from "./Dashboard"
 import Signup from "./Signup"
 import Signin from "./Signin"
 import SendMoney from "./SendMoney"
+import Profile from "./Profile"
 
 export {
     Home,
@@ -10,4 +11,5 @@ export {
     Signup,
     Signin,
     SendMoney,
+    Profile,
 }
