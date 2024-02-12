@@ -15,7 +15,8 @@ export default function UsersBar(){
             headers: {
                 authorization: token
             }
-        }).then(res => setUsers(res.data.users));
+        }).then(res => setUsers(res.data.users))
+        .catch((err) => console.log(err));
     }, [token, filter])
 
     return (

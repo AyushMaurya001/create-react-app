@@ -21,12 +21,11 @@ export default function Transactions(){
     }, [])
 
     return (
-        <div>
-            <p className=" font-Inter text-center text-xl font-medium px-10 m-4" >
-                {sendTransactions.map(transaction => <Transaction key={transaction._id} status="send" userId={transaction.toUserId} amount={transaction.amount} />)}
-                {receivedTransactions.map(transaction => <Transaction key={transaction._id} status="received" userId={transaction.fromUserId} amount={transaction.amount} />)}
-            </p>
-        </div>
+        <p className=" w-full flex flex-col items-center font-Inter text-center font-medium px-10 m-4" >
+            <p className=" text-2xl border-b border-black m-2">Your Transactions</p>
+            {sendTransactions.map(transaction => <Transaction key={transaction._id} status="send" userId={transaction.toUserId} amount={transaction.amount} />)}
+            {receivedTransactions.map(transaction => <Transaction key={transaction._id} status="received" userId={transaction.fromUserId} amount={transaction.amount} />)}
+        </p>
     )
 
 }

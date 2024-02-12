@@ -18,17 +18,15 @@ export default function Transaction({ status, userId, amount }){
     }, [userId])
 
     return (
-        <div>
-            <div className=" flex justify-center items-center">
-                <div className=" mx-10 w-20 h-20 rounded-full bg-yellow-400 flex justify-center items-center text-black">
-                    {name}
-                </div>
-                <div className=" mx-10">
-                    {amount}
-                </div>
-                <div className=" mx-10">
-                    {status}
-                </div>
+        <div className=" w-8/12 m-2 flex justify-between items-center text-xl">
+            <div className=" mx-10 w-20 h-20 rounded-full bg-yellow-400 flex justify-center items-center text-black">
+                {name}
+            </div>
+            <div className=" mx-10">
+                {amount}
+            </div>
+            <div className=" mx-10">
+                {status}
             </div>
         </div>
     )
